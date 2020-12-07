@@ -29,7 +29,7 @@ exports.getCategory = (req, res) => {
 };
 
 exports.getAllCategory = (req, res) => {
-  Category.find().exec((err, categories) => {
+  Category.find({archive:false}).exec((err, categories) => {
     if (err) {
       return res.status(400).json({
         error: "NO categories found"
@@ -55,8 +55,8 @@ exports.updateCategory = (req, res) => {
 
 exports.removeCategory = (req, res) => {
   const category = req.category;
-
-  category.remove((err, category) => {
+  // update the value of archive instead of deleting the post
+  Category.updateOne({_id:category._id},{$set:{archive:true}}).exec((err,data)=>{
     if (err) {
       return res.status(400).json({
         error: "Failed to delete this category"
@@ -65,5 +65,5 @@ exports.removeCategory = (req, res) => {
     res.json({
       message: "Successfull deleted"
     });
-  });
+  })
 };

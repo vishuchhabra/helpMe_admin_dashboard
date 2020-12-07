@@ -81,7 +81,8 @@ exports.photo = (req, res, next) => {
 // delete controllers
 exports.deleteProduct = (req, res) => {
   let post = req.post;
-  post.remove((err, deletedProduct) => {
+  //update the value of post instead of deleting
+  Post.updateOne({_id:post._id},{$set:{archive:true}}).exec((err,data)=>{
     if (err) {
       return res.status(400).json({
         error: "Failed to delete the post"
@@ -89,7 +90,7 @@ exports.deleteProduct = (req, res) => {
     }
     res.json({
       message: "Deletion was a success",
-      deletedProduct
+      data
     });
   });
 };
@@ -137,10 +138,10 @@ exports.updateProduct = (req, res) => {
 //post listing
 
 exports.getAllProducts = (req, res) => {
-  let limit = req.query.limit ? parseInt(req.query.limit) : 8;
+  let limit = req.query.limit ? parseInt(req.query.limit) : 10000;
   let sortBy = req.query.sortBy ? req.query.sortBy : "_id";
 
-  Post.find()
+  Post.find({archive:false})
     .select("-photo")
     .populate("category")
     .sort([[sortBy, "asc"]])

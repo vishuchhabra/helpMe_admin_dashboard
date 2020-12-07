@@ -2,7 +2,11 @@ const mongoose = require("mongoose");
 const { ObjectId } = mongoose.Schema;
 
 const postSchema = new mongoose.Schema(
-  {
+{
+    archive:{
+      type:Boolean,
+      default:false
+    },
     name: {
       type: String,
       trim: true,

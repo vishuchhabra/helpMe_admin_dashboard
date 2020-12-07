@@ -2,6 +2,10 @@ const mongoose = require("mongoose");
 
 const categorySchema = new mongoose.Schema(
   {
+    archive:{
+      type:Boolean,
+      default:false
+    },
     name: {
       type: String,
       trim: true,
