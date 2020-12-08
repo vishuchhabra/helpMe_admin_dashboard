@@ -42,7 +42,7 @@ app.use("/api", postRoutes);
 
 
 //PORT
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 4001;
 
 app.use(express.static(path.join(__dirname, 'build')));
 
