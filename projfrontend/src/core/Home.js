@@ -8,12 +8,12 @@ export default function Home() {
     
 
   return (
-    <Base title="WELCOME helpMe" description="Admin Dashboard">
+    <Base title="Welcome helpMe" description="Admin Dashboard">
       <div className="row text-center">
         <div className="col-12 text-center pd-3">
-       <h3 className="text-white">
+       <h5 className="text-white">
         HEY , WE ARE HERE TO SERVE OUR SOCIETY........
-       </h3>
+       </h5>
        <img src={img} width={300} alt="proble with image"/>
        </div>
        

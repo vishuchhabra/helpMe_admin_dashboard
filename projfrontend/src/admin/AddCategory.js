@@ -88,7 +88,7 @@ const AddCategory = () => {
 
   return (
     <Base
-      title="WELCOME helpMe"
+      title="Welcome helpMe"
       description="Add New Category..."
       className="container bg-success p-4"
     >

@@ -194,14 +194,14 @@ const AddProduct = () => {
         onClick={onSubmit}
         className="btn btn-outline-success mb-3"
       >
-        Create Product
+        Create Post
       </button>
     </form>
   );
 
   return (
     <Base
-      title="WELCOME helpMe"
+      title="Welcome helpMe"
       description="Add more Posts..."
       className="container bg-success p-4"
     >

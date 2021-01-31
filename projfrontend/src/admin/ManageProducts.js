@@ -37,7 +37,7 @@ const ManageProducts = () => {
     }
 
     return (
-        <Base title="WELCOME helpMe" description="Manage Posts Here...">
+        <Base title="Welcome helpMe" description="Manage Posts Here...">
         <h3 className="mb-4">Go  To Admin Home!!!</h3>
         <Link className="btn btn-danger" to={`/admin/dashboard`}>
           <span className="">Admin Home</span>
@@ -50,7 +50,7 @@ const ManageProducts = () => {
              return (
               <div key={index} className="row text-center mb-2 ">
               <div className="col-4">
-             <h3 className="text-white text-left">{product.name}</h3>
+             <h3 className="text-white text-left">{product.name} ( {product.updatedAt.slice(0,10)} )</h3>
               </div>
               <div className="col-4">
                 <Link

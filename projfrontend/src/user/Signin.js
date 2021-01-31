@@ -113,7 +113,7 @@ const Signin = () => {
   };
 
   return (
-    <Base title="WELCOME helpMe" description="Admin Dashboard">
+    <Base title="Welcome helpMe" description="Admin Dashboard">
       {loadingMessage()}
       {errorMessage()}
       {signInForm()}

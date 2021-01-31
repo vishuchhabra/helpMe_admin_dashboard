@@ -226,7 +226,7 @@ const UpdateProduct = ({match}) => {
 
   return (
     <Base
-      title="WELCOME helpMe"
+      title="Welcome helpMe"
       description="Update Posts here..."
       className="container bg-success p-4"
     >

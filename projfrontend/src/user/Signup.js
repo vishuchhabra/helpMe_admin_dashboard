@@ -104,7 +104,7 @@ const Signup = () => {
 
 
   return (
-    <Base title="WELCOME helpMe" description="Admin Dashboard">
+    <Base title="Welcome helpMe" description="Admin Dashboard">
       {suucessMessage()}
       {errorMessage()}
       {signUpForm()}

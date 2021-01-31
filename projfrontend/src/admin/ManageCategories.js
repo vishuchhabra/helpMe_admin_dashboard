@@ -39,7 +39,7 @@ const ManageCategories = () => {
   }
 
   return (
-    <Base title="WELCOME helpMe" description="Manage Categories Here...">
+    <Base title="Welcome helpMe" description="Manage Categories Here...">
     <h3 className="mb-4">Go  To Admin Home!!!</h3>
     <Link className="btn btn-danger" to={`/admin/dashboard`}>
       <span className="">Admin Home</span>
